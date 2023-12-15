@@ -1,4 +1,18 @@
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require('tailwindcss/plugin')
+
+const MyPerspective = plugin(function({addUtilities}){
+  addUtilities({
+    '.my-perspective': {
+      transform: 'perspective(800px) rotateY(-45deg) translateZ(0)',
+    },
+  })
+})
+
+
+
+
 module.exports = {
   content: [
     "./index.html",
@@ -14,6 +28,10 @@ module.exports = {
             red: '#ab0a0a',
             grey: '#F7F7F7',
             turq: '#A6D1CB',
+        },
+        rotate: {
+          '30': '30deg',
+          '60': '60deg',
         },
       },
       minHeight: {
@@ -40,6 +58,8 @@ module.exports = {
     require('tailwind-scrollbar-hide'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
+    require('tailwindcss-3d'),
+    MyPerspective,
   ],
 }
 
