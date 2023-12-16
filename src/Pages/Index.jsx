@@ -58,17 +58,17 @@ const Index = () => {
         </ul>
       </nav>
       
-      {/* <section className="w-full flex flex-row justify-end pr-10 perspective-1000">
+      <section className="w-full flex flex-row justify-end pr-10 perspective-1000">
         <div className="relative text-right font-bold text-slate-800 leading-tight px-8 backface-hidden -rotate-y-45 select-none mr-48 mt-10 perspective-origin-center">
           <p className="text-[140px] ">Hello!</p>
           <p className="text-[100px]">My Name is</p>
           <p className="text-[150px]">Matt Kars</p>
           <p className="text-[50px]">I like to make stuff...</p>
         </div> 
-      </section> */}
+      </section>
       
       {/* Dev work */}
-      {/* <section className="bg-white pt-24 sm:pt-32">
+      <section className="bg-white pt-24 sm:pt-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-2xl">
               <div className="flex gap-2 items-center tracking-tight">
@@ -97,14 +97,14 @@ const Index = () => {
         />
 
 
-      </section> */}
+      </section>
       
 
       {/* <FromTheBlog3Col /> */}
 
 
       <NewsletterLatestPrev />
-      {/* <NewsletterSub /> */}
+      <NewsletterSub />
 
 
     </div>
