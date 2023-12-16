@@ -7,12 +7,14 @@ import {
 
 // Pages
 import Index from './Pages/Index'
+import Newsletter from './Pages/Newsletter'
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path='/' element={<Index />} />
+      <Route path='/newsletter' element={<Newsletter />} />
     </>
   )
 )

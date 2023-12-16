@@ -64,7 +64,7 @@ const posts = [
 
 export default function FromTheBlog3Col() {
   return (
-    <section className="bg-white py-24 sm:py-32">
+    <section className="bg-white pt-24 pb-12 sm:px-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="max-w-2xl">
           <div className="flex gap-2 items-center tracking-tight">
