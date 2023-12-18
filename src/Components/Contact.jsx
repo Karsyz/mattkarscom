@@ -1,6 +1,7 @@
 export default function Contact() {
   return (
-    <div className="relative bg-white">
+    <div id="contact" className="relative bg-white">
+
       <div className="lg:absolute lg:inset-0 lg:left-1/2">
         <img
           className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full"
@@ -8,13 +9,30 @@ export default function Contact() {
           alt=""
         />
       </div>
+
       <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
+        
         <div className="px-6 lg:px-8">
+
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Let's work together</h2>
+            
+          <div className="max-w-2xl">
+            <div className="flex gap-2 items-center tracking-tight">
+              <div className="h-8 w-8 rounded-sm bg-gray-400" />
+              <h3 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Let's Work Together!</h3>
+            </div>  
+            <p className="mt-2 text-lg leading-8 text-gray-600">
+              You have reached the business mail box of Karsy, please leave a message and He'll get back to you as soon as he can.
+            </p>
+          </div>
+
+
+            {/* <h2 className="text-3xl font-bold tracking-tight text-gray-900">Let's work together</h2>
             <p className="mt-2 text-lg leading-8 text-gray-600">
               Proin volutpat consequat porttitor cras nullam gravida at orci molestie a eu arcu sed ut tincidunt magna.
             </p>
+             */}
+
             <form action="#" method="POST" className="mt-16">
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>
@@ -96,7 +114,7 @@ export default function Contact() {
                 <div className="sm:col-span-2">
                   <div className="flex justify-between text-sm leading-6">
                     <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
-                      How can we help you?
+                      How can I help you?
                     </label>
                     <p id="message-description" className="text-gray-400">
                       Max 500 characters
@@ -113,7 +131,7 @@ export default function Contact() {
                     />
                   </div>
                 </div>
-                <fieldset className="sm:col-span-2">
+                {/* <fieldset className="sm:col-span-2">
                   <legend className="block text-sm font-semibold leading-6 text-gray-900">Expected budget</legend>
                   <div className="mt-4 space-y-4 text-sm leading-6 text-gray-600">
                     <div className="flex gap-x-2.5">
@@ -157,9 +175,9 @@ export default function Contact() {
                       <label htmlFor="budget-over-100k">$100K+</label>
                     </div>
                   </div>
-                </fieldset>
+                </fieldset> */}
               </div>
-              <div className="mt-10 flex justify-end border-t border-gray-900/10 pt-8">
+              <div className="mt-10 flex justify-end  pt-8"> {/* border-t border-gray-900/10 */}
                 <button
                   type="submit"
                   className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"

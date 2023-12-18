@@ -7,29 +7,36 @@ import DevWork from "../Components/DevWork"
 import Contact from "../Components/Contact"
 import Hero from "../Components/Hero"
 import TwitterPost from "../Components/TwitterPost"
+import AboutMe from "../Components/AboutMe"
+import Projects from "../Components/Projects"
 
 const Index = () => {
 
 
   return (
-    <div className="">
+    <div className="scroll-smooth">
 
       <Navbar />
       
       <Hero />
       
       <DevWork />
+      
+      <AboutMe />
 
       <FromTheBlog3Col />
 
-      
 
       <NewsletterLatestPrev />
 
+      <NewsletterSub />
+
+      <Projects />
+      
       <TwitterPost />
 
-      <NewsletterSub />
       <Contact />
+      
       <Footer />
 
 

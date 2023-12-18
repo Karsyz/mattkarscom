@@ -3,18 +3,18 @@ import { HiOutlineCloudUpload, HiLockClosed, HiOutlineServer } from 'react-icons
 
 const features = [
   {
-    name: 'Push to deploy.',
+    name: 'Seamlessly integrate into your site',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
     icon: HiOutlineCloudUpload,
   },
   {
-    name: 'SSL certificates.',
+    name: 'Encrypted User Data',
     description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
     icon: HiLockClosed,
   },
   {
-    name: 'Database backups.',
+    name: 'Offsite User Data Management',
     description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
     icon: HiOutlineServer,
   },
@@ -29,11 +29,11 @@ export default function DevWorkPanel({imgLeft}) {
           
         <div className={`lg:pr-8 lg:pt-4 ${imgLeft ? 'order-1 lg:order-2' : 'order-2 lg:order-1'}`}>
             <div className="lg:max-w-lg">
-              <h3 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">A better workflow</h3>
-              <h2 className="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2>
+              <h3 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">Steeple Peeps</h3>
+              <h2 className="text-base font-semibold leading-7 text-indigo-600">A church member directory</h2>
 
-              <p className="mt-6 text-lg leading-8 text-gray-600">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+              <p className="mt-4 text-lg text-gray-600">
+                Safe and secure tools for your congregation. Users can securely log in to their account, upload their picture, manage their info and let others in the church know how they can help.
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (

@@ -3,7 +3,7 @@ import DevWorkPanel from "../Components/DevWorkPanel"
 
 const DevWork = () => {
   return (
-    <section className="bg-white pt-24 sm:pt-32">
+    <section id="devwork" className="bg-white pt-24 sm:pt-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-2xl">
               <div className="flex gap-2 items-center tracking-tight">
@@ -13,7 +13,7 @@ const DevWork = () => {
 
               </div>  
               <p className="mt-2 text-lg leading-8 text-gray-600">
-                Learn how to grow your business with our expert advice.
+                A few projects that were fun and challenging to build
               </p>
             </div>
           </div>
