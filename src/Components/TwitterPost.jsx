@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 const TwitterPost = () => {
+  
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://platform.twitter.com/widgets.js";

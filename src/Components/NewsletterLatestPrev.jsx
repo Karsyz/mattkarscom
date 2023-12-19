@@ -1,7 +1,7 @@
 
 const newsLetterData = {
   date: '14DEC23',
-  tagline: 'A list of some awesome content every day',
+  tagline: 'Awesome content delivered to your inbox every day',
   headline: 'This is the headline for the newsletter',
   body: [
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque est non inventore repudiandae enim molestias atque voluptates hic nobis nisi quibusdam provident perferendis ullam, ipsum eos, qui, voluptate incidunt impedit rerum libero sint illo fuga veniam harum. Quis, tenetur eveniet.Lotates hic nobis nisi quibusdam provident perferendis ullam, ipsum eos, qui,rem ipsum dolor sit amet consectetur adipisicing elit Eaque est non inventore repudiandae enim molestias.", "Atque voluptates hic nobis nisi quibusdam provident perferendis ullam, ipsum eos, qui, voluptate incidunt impedit rerum libero sint illo fuga veniam harum. Quis, tenetur eveniet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque est non inventore repudiandae enim molestias atque voluptates hic nobis nisi quibusdam provident perferendis ullam, ipsum eos, qui, voluptate incidunt impedit rerum libero sint illo fuga veniam harum. Quis, tenetur eveniet.Lorem ipsum do.", "Lor sit amet consectetur adipisicing elit. Eaque est non inventore repudiandae enim molestias atque voluptates hic nobis nisi quibusdam provident perferendis ullam, ipsum eos, qui, voluptate incidunt impedit rerum libero sint illo fuga veniam harum. Quis, tenetur eveniet.",
@@ -37,7 +37,8 @@ const NewsletterLatestPrev = () => {
         <div className="mt-2 text-base text-gray-600 text-justify columns-1 md:columns-2 lg:columns-3 gap-8">
           {body.map((paragraph, ind) => {
             return (
-              <p className={`${ind !== 0 && 'my-3'}`}>
+              <p key={ind} > 
+              {/* className={`${ind !== 0 && 'my-3'}`} */}
                 {paragraph}  
               </p>
             )

@@ -36,9 +36,12 @@ const NavBar = () => {
     <nav className="h-[60px] font-semibold">
       <ul className="flex flex-row justify-evenly items-center h-full">
 
-          {navItems.map(nav => {
-            return(
-              <li className="whitespace-nowrap overflow-hidden">
+          {navItems.map((nav, ind) => {
+            return (
+              <li 
+                key={ind} 
+                className="whitespace-nowrap overflow-hidden"
+              >
                 <a href={nav.href}>
                   <div className="flex gap-1 items-center hover:drop-shadow-md transition-transform ease-in-out -translate-x-[20px] hover:translate-x-0 duration-300 rounded-md bg-transparent">
                     <div 

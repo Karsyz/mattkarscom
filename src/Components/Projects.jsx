@@ -75,7 +75,7 @@ const Projects = () => {
 
           </div>  
           <p className="mt-2 text-lg text-gray-600">
-            I love to tinker with and make things. These are some of the things I've been working on.
+            I love to tinker with and make all sorts of things. These are some of the things I've been working on.
           </p>
         </div>
 

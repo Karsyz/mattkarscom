@@ -10,9 +10,6 @@ const MyPerspective = plugin(function({addUtilities}){
   })
 })
 
-
-
-
 module.exports = {
   content: [
     "./index.html",

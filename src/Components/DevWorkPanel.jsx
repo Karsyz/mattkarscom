@@ -36,8 +36,8 @@ export default function DevWorkPanel({imgLeft}) {
                 Safe and secure tools for your congregation. Users can securely log in to their account, upload their picture, manage their info and let others in the church know how they can help.
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
-                {features.map((feature) => (
-                  <div key={feature.name} className="relative pl-9">
+                {features.map((feature, ind) => (
+                  <div key={ind} className="relative pl-9">
                     <dt className="inline font-semibold text-gray-900">
                       <feature.icon className="absolute left-1 top-1 h-5 w-5 text-indigo-600" aria-hidden="true" />
                       {feature.name}

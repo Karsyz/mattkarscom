@@ -9,39 +9,26 @@ import Hero from "../Components/Hero"
 import TwitterPost from "../Components/TwitterPost"
 import AboutMe from "../Components/AboutMe"
 import Projects from "../Components/Projects"
+import LivePortrait from "../Components/LivePortrait"
 
 const Index = () => {
-
-
   return (
-    <div className="scroll-smooth">
-
+    <div className="scroll-smooth w-full">
       <Navbar />
-      
-      <Hero />
-      
+      <div className="w-full flex flex-row justify-center relative mt-4">
+        <LivePortrait />
+        <Hero />
+      </div>
       <DevWork />
-      
       <AboutMe />
-
       <FromTheBlog3Col />
-
-
       <NewsletterLatestPrev />
-
       <NewsletterSub />
-
       <Projects />
-      
       <TwitterPost />
-
       <Contact />
-      
       <Footer />
-
-
     </div>
-
   )
 }
 
