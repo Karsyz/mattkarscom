@@ -38,7 +38,7 @@ const NewsletterLatestPrev = () => {
           {body.map((paragraph, ind) => {
             return (
               <p key={ind} > 
-              {/* className={`${ind !== 0 && 'my-3'}`} */}
+              className={`${ind !== 0 && 'my-3'}`}
                 {paragraph}  
               </p>
             )
