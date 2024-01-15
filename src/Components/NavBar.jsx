@@ -1,32 +1,39 @@
+import { NavLink } from 'react-router-dom'
+
 const navItems = [
   {
+    name: "Home",
+    to: "/",
+    color: "coral",
+  },
+  {
     name: "Dev Work",
-    href: "#devwork",
+    to: "devwork",
     color: "green",
   },
-  {
-    name: "Blog",
-    href: "#blog",
-    color: "blue",
-  },
-  {
-    name: "Newsletter",
-    href: "#newsletter",
-    color: "red",
-  },
-  {
-    name: "Projects",
-    href: "#projects",
-    color: "turquoise",
-  },
+  // {
+  //   name: "Blog",
+  //   to: "blog",
+  //   color: "blue",
+  // },
+  // {
+  //   name: "Newsletter",
+  //   to: "newsletter",
+  //   color: "red",
+  // },
+  // {
+  //   name: "Projects",
+  //   to: "projects",
+  //   color: "turquoise",
+  // },
   {
     name: "About",
-    href: "#about",
+    to: "about",
     color: "orange",
   },
   {
     name: "Contact",
-    href: "#contact",
+    to: "contact",
     color: "slategray",
   },
 ]
@@ -42,7 +49,7 @@ const NavBar = () => {
                 key={ind} 
                 className="whitespace-nowrap overflow-hidden"
               >
-                <a href={nav.href}>
+                <NavLink to={nav.to}>
                   <div className="flex gap-1 items-center hover:drop-shadow-md transition-transform ease-in-out -translate-x-[20px] hover:translate-x-0 duration-300 rounded-md bg-transparent">
                     <div 
                       className="h-[20px] w-[20px] rounded-sm"
@@ -50,7 +57,7 @@ const NavBar = () => {
                     />
                     <div className="text-xl select-none">{nav.name}</div>
                   </div>
-                </a>
+                </NavLink>
               </li>
             )
           })}

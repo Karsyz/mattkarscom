@@ -2,14 +2,6 @@
 
 const plugin = require('tailwindcss/plugin')
 
-const MyPerspective = plugin(function({addUtilities}){
-  addUtilities({
-    '.my-perspective': {
-      transform: 'perspective(800px) rotateY(-45deg) translateZ(0)',
-    },
-  })
-})
-
 module.exports = {
   content: [
     "./index.html",
@@ -56,7 +48,6 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('tailwindcss-3d'),
-    MyPerspective,
   ],
 }
 
