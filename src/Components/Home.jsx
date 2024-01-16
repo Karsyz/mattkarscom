@@ -1,17 +1,46 @@
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+
 const Home = () => {
+
+  const [videoOpen, setVideoOpen] = useState(false);
+  const [audioOpen, setAudioOpen] = useState(false);
+
   return (
     <section className="flex flex-row px-10 py-3 w-full">
         <article className="relative flex flex-col text-xl font-base w-full lg:w-1/2">
-        <NavLink to="about" className="flex flex-row">
-            <img src="" alt="" />
+        <NavLink to="about" className="relative flex flex-row">
+            <img 
+              src="/img/1647651066738.jpg" 
+              alt="picture of matt" 
+              className='rounded-full w-[50px] h-[50px] mr-4 z-20'/>
+            <div className='absolute rounded-full w-[50px] h-[50px] bg-[coral] translate-x-1 translate-y-1'></div>
             <div>
               <h1 className="font-bold text-3xl">Hi, I'm Matt Kars</h1>
               <h2 className="text-xs mb-3">A Software Developer, amongst other things</h2>
             </div>
           </NavLink>
-          <p className="text-xl font-base text-justify mb-3">And just like that... BAM! A wall of text you probably didn't want to read. And if you really don't and there's already been too many words, I have good news for you friend; I have options: Watch, and also listen</p>
+          <p className="text-xl font-base text-justify mb-3">And just like that... BAM! A wall of text you probably didn't want to read. And if you really didn't and there is just too many words, I have good news for you friend; more options:  
+            <button 
+              className='text-blue-600 font-semibold ml-1'
+              onClick={()=> setVideoOpen(prev => !prev)}
+            >Watch</button>
+            , and also  
+            <button 
+              className='text-red-600 font-semibold ml-1'
+              onClick={()=> setAudioOpen(prev => !prev)}
+            >Listen.</button>
+          </p>
+          
+          <div className='overflow-hidden'>
+            {videoOpen && 
+              <div className='flex flex-row justify-center items-center h-[100px] transition bg-blue-500 rounded-md mb-3 ease-in-out duration-1000'>Video Player</div>
+            }
+            {audioOpen && 
+              <div className='flex flex-row justify-center items-center h-[100px] transition bg-red-500 rounded-md mb-3 ease-in-out duration-1000'>Audio Player</div>
+            }
 
+          </div>
           <p className="text-xl font-base mb-3 text-justify">This site was intended to be a dev portfolio and you see, I'm into quite a few things, and I want to share those things somehow, and I figured I could kinda jam it all together in this one space that I'm calling digital home.</p>
           <p className="text-xl font-base mb-3 text-justify">I orignally started off with a template and it just kinda looked like every other site out there; and also, what was I thinking?!?! Using a template for a dev portfolio?!  It just sounds lazy doesn't it?  That's not me at all.  Time to put my best foot forward (it's the right one btw).</p>
           <p className="text-xl font-base mb-3 text-justify">What was I saying agian?... Oh, yes.  So, lacking the imagination or inspiration to make something of myself in the medium I've actually choosen make money with, I decided to do away with all the flashy bits that was the previous site and just get to the point in a nice, clean, albeit lackluster, approach. (That was a lot of commas, what the...). It's not actually necessary to have a portfolio that looks like a gaming rig... right?</p>
