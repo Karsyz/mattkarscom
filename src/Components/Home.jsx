@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const Home = () => {
 
-  const [videoOpen, setVideoOpen] = useState(false);
+  const [moreWords, setMoreWords] = useState(false);
   const [audioOpen, setAudioOpen] = useState(false);
 
   return (
@@ -20,35 +20,71 @@ const Home = () => {
               <h2 className="text-xs mb-3">A Software Developer, amongst other things</h2>
             </div>
           </NavLink>
-          <p className="text-xl font-base text-justify mb-3">And just like that... BAM! A wall of text you probably didn't want to read. And if you really didn't and there is just too many words, I have good news for you friend; more options:  
+          <p className="text-xl font-base text-justify mb-3">Bro, why so {moreWords ? "few" : "many"} words?!
             <button 
-              className='text-blue-600 font-semibold ml-1'
-              onClick={()=> setVideoOpen(prev => !prev)}
-            >Watch</button>
-            , and also  
+              className='text-sm bg-orange-400 mx-2 py-1 px-2 rounded-md drop-shadow scale-90'
+              onClick={()=> setMoreWords(prev => !prev)}
+            >
+              {moreWords ? "Moar Words Now!" : "Less Words Please!"}
+              </button></p>
+            <p className="text-xl font-base text-justify mb-3">
+            You can 
             <button 
-              className='text-red-600 font-semibold ml-1'
+              className='text-blue-600 font-bold mx-2'
               onClick={()=> setAudioOpen(prev => !prev)}
-            >Listen.</button>
+            >Listen</button>
+            to me talk for a bit instead. Either way, thanks for checking out my stuff. I hope you find something useful here.
           </p>
           
           <div className='overflow-hidden'>
-            {videoOpen && 
-              <div className='flex flex-row justify-center items-center h-[100px] transition bg-blue-500 rounded-md mb-3 ease-in-out duration-1000'>Video Player</div>
-            }
             {audioOpen && 
-              <div className='flex flex-row justify-center items-center h-[100px] transition bg-red-500 rounded-md mb-3 ease-in-out duration-1000'>Audio Player</div>
+              <div className='flex flex-col justify-center items-center h-[100px] transition bg-transparent rounded-md mb-3 ease-in-out duration-1000'>
+                <audio 
+                  src="/audio/karsyPortfolio.mp3" 
+                  type="audio/mpeg"
+                  preload="none" 
+                  controls
+                >
+                  Error: Your browser does not support the audio element.
+                </audio>
+              </div>
             }
 
           </div>
-          <p className="text-xl font-base mb-3 text-justify">This site was intended to be a dev portfolio and you see, I'm into quite a few things, and I want to share those things somehow, and I figured I could kinda jam it all together in this one space that I'm calling digital home.</p>
-          <p className="text-xl font-base mb-3 text-justify">I orignally started off with a template and it just kinda looked like every other site out there; and also, what was I thinking?!?! Using a template for a dev portfolio?!  It just sounds lazy doesn't it?  That's not me at all.  Time to put my best foot forward (it's the right one btw).</p>
-          <p className="text-xl font-base mb-3 text-justify">What was I saying agian?... Oh, yes.  So, lacking the imagination or inspiration to make something of myself in the medium I've actually choosen make money with, I decided to do away with all the flashy bits that was the previous site and just get to the point in a nice, clean, albeit lackluster, approach. (That was a lot of commas, what the...). It's not actually necessary to have a portfolio that looks like a gaming rig... right?</p>
-          <p className="text-xl font-base mb-3 text-justify">Yep, this will do (for now at least).  Does it really need to be any more than this? I don't think so -and if you've read till now we're probably like minded anyways.</p>
-          <p className="text-xl font-base mb-3 text-justify">I wrote this site using a vite/react frontend and a java backend for the little bits of api needed here and there.. Like everything in life for a designer/engineer/dev/etc, nothing is ever quite finished, but it will get the job done.</p>
-          <p className="text-xl font-base mb-3 text-justify">Some dev work I have done recently is under the heading up top of the same name. Checkout some of the other areas too if you want, I'll be adding content as time goes on.</p>
-          <p className="text-xl font-base mb-3 text-justify">Oh, and thanks for giving me a chance, checking out what I can do and reading (or skimming) up to this point, you're a trooper.</p>
-          <p className="text-xl font-base mb-3 text-justify">Feel free to reach out if you want to chat or have questions about something.</p>
+          {moreWords ?
+          
+          <>        
+            <p className="text-xl font-base mb-3 text-justify">I intended mattkars.com to be a dev portfolio, but I'm into a lot of other stuff too; so I figured I'd just wrap it all up one location.</p>
+            <p className="text-xl font-base mb-3 text-justify">Areas of interest are up in the navbar.  I'm working on a blog, newsletter, and a projects timeline section where I can post updates on what I'm working on.</p>
+            <p className="text-xl font-base mb-3 text-justify">Feel free to 
+            <NavLink to="contact" className="text-blue-600 font-bold mx-2">
+              reach out
+            </NavLink>
+            if you want to chat or have questions about something.</p>
+          </>
+          :
+          <>
+            <p className="text-xl font-base mb-3 text-justify">This site was originally intended to be a dev portfolio, but I'm into quite a few things and I wanted a place to share those things too somehow. I figured I could kinda jam it all together here in this one space that I'm calling digital home.</p>
+            <p className="text-xl font-base mb-3 text-justify">And how fitting, considering the url is my name an'all.</p>
+            <p className="text-xl font-base mb-3 text-justify">My first dev portfolio started off with a template and it just looked like every other dev portfolio out there, even it being simple; and also, what was I thinking?!?! Using a template for a dev portfolio?! It just sounds lazy doesn't it? Of course it does, but just don't judge me: we all had to start somewhere and I'm thinkful that I took action and build something anyways. The template-esque site never felt good to me and it's not really a good representation of me at all. Time to put my best foot forward (it's the right foot btw).</p>
+            <p className="text-xl font-base mb-3 text-justify">What was I saying agian? Oh yea...  So, I decided to do away with all the flashy bits that was the previous site and just get to the point in a nice, clean, albeit lackluster, approach. Taking it back to first principles so to speak. It's not actually necessary to have a portfolio that looks like a gaming rig... right? RGB on the website tho...hrmmm</p>
+            <p className="text-xl font-base mb-3 text-justify">I wrote this site using a vite/react frontend and a java backend for the little bits of api needed here and there. Like everything in life for a designer/engineer/dev, nothing is ever quite finished, polished, or lacks the next feature we thought of, but this will get the job done.</p>
+            <p className="text-xl font-base mb-3 text-justify">Some dev work that I've done recently is on display under the
+            <NavLink to="contact" className="text-green-600 font-bold mx-2">
+            'dev work'
+            </NavLink>
+            heading up in the navbar. Checkout some of the other areas too if you want, I'll be adding content as time goes on. I'm working on a blog, newsletter, and a projects timeline section where I can post updates on some of the other things besides dev stuff that I'm working on.</p>
+            <p className="text-xl font-base mb-3 text-justify">Oh, and thanks for reading (or skimming) up to this point, you're a trooper!</p>
+            <p className="text-xl font-base mb-3 text-justify">Feel free to 
+            <NavLink to="contact" className="text-blue-600 font-bold mx-2">
+              reach out
+            </NavLink>
+            if you want to chat or have questions about something.</p>
+          </>
+          }
+
+
+
         </article>
         <aside className="w-1/2 hidden lg:flex flex-row justify-end">
           <p className="w-5/12 p-4 text-xs font-base border-2 border-slate-100 rounded-md self-center">zomg... there's so much space over here</p>

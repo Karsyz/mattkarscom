@@ -1,14 +1,14 @@
 
 const AboutMe = () => {
   return (
-    <section id="about" className="bg-white pt-24 sm:px-32">
+    <section id="about" className="bg-white">
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto  px-6 lg:px-8">
         
         <div className="max-w-2xl">
           <div className="flex gap-2 items-center tracking-tight">
 
-            <div className="h-8 w-8 rounded-sm bg-orange-400" />
+            <div className="h-8 w-8 rounded-sm bg-blue-400" />
             <h3 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">About Me</h3>
 
           </div>  

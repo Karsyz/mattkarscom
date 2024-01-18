@@ -29,7 +29,7 @@ const navItems = [
   {
     name: "About",
     to: "about",
-    color: "orange",
+    color: "rgb(96 165 250)",
   },
   {
     name: "Contact",
