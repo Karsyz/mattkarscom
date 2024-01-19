@@ -30,7 +30,7 @@ module.exports = {
         'standard': '2px 5px 2px grey'
       },
       animation: {
-        'reviewFade': 'fadeIn 1s ease-in-out',
+        'fade': 'fadeIn 0.3s ease-in-out',
       },
       keyframes: {
         fadeIn: {

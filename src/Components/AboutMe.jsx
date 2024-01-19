@@ -1,9 +1,9 @@
 
 const AboutMe = () => {
   return (
-    <section id="about" className="bg-white">
+    <section id="about" className="bg-white animate-fade">
 
-      <div className="mx-auto  px-6 lg:px-8">
+      <div className="px-10">
         
         <div className="max-w-2xl">
           <div className="flex gap-2 items-center tracking-tight">
